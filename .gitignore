@@ -1,2 +1,3 @@
 .ipynb_checkpoints/
-MSL-Venv/
+MSL-Venv/ 
+*.log
