@@ -19,9 +19,10 @@
 <body>
 
 <div class="container"><br>
-<h1>Project 2020</h1><br>
-<h2>Machine Learning and Statistics</h2><br>
-
+<h1 align="center">Project 2020</h1><br>
+<h2 align="center">Machine Learning and Statistics</h2><br>
+<p align="center"><img align="center" src='/static/GMIT.jpg' width=40%/></p><br>
+<h3 align="center">Eoghan Delaney - Student Number: G00376462</h3><br>
 <div class="container">
   <div class="row">
     <div class="col-sm">
@@ -46,7 +47,9 @@
 <script>
         $("#predict-btn").click(function(e) {
             e.preventDefault();
-            $.getJSON("/api/uniform", function(data) {
+            var id = parseFloat($("#wind-speed").val()).toFixed(2);
+            console.log(id);
+            $.getJSON("/api/predict/"+id, function(data) {
                 $('#power-output').val(data.Value);
             });
         });
