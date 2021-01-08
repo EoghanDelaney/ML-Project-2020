@@ -1,0 +1,2 @@
+Clean up the MD file
+Update the text in the main jupyter notebook
