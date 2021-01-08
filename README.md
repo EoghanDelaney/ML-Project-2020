@@ -31,7 +31,9 @@ There are two ways in which we can download the repository/project folder. The c
 
 
 ## How to run the code?
-Once the download is complete we can now run the Python code. In order to do this, we must have an up-to-date Python 3 package installed, along with a number of essential Python modules most of which is Jupyter Notebook.
+
+### Jupyter
+Once the download is complete we can now run the Python/Jupyter/Docker code. In order to do this, we must have an up-to-date Python 3 package installed, along with a number of essential Python modules most of which is Jupyter Notebook.
 Navigate to the www.Python.org url and download the latest version of Python 3, by following the instructions on the website. Once complete open the command line, use the pip install command for the below modules.
 
     • Pip install Jupyter
@@ -40,12 +42,27 @@ Navigate to the www.Python.org url and download the latest version of Python 3, 
     • Pip install Tensorflow
     • Pip install Flask
 
-   
-
 These packages are used as part of the Jupyter Notebook. Once complete, navigate to the location where the Jupyter Notebook is saved. To execute the Notebook we use the below command followed by enter.
   
   Jupyter Notebook
 
 This will initializes the notebook for review.
+
+### Docker & Flask
+After reviewing the Jupyter Notebook the next step is to review the Flask Web app that is viewed using a Docker container.
+
+We can build a Docker image using the below command.
+```
+    docker build -t powerpred-app
+```
+To launch the app we can now run the following code to run the docker image.
+```
+    docker run -p 5000:5000 powerpred-app
+```
+To kill the docker image we can now use the following command
+```
+    docker container ls #this will give use the active container
+    docker kill CONTAINER-ID
+```
 
 (The above guide was adapted from a previous assignment)
